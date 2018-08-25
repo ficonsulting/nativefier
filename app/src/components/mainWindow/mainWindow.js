@@ -345,6 +345,7 @@ function createMainWindow(inpOptions, onAppQuit, setDockBadge) {
       );
     }
     maybeHideWindow(mainWindow, event, options.fastQuit, options.tray);
+    Shiny.setInputValue("nativeClose", "closeApp");
   });
 
   return mainWindow;
